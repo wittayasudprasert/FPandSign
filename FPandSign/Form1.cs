@@ -587,8 +587,8 @@ namespace FPandSign
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            OpenAPI();
-            OpenDevice();
+            //OpenAPI();
+            //OpenDevice();
 
             //****** Signature *******//
             CheckForIllegalCrossThreadCalls = false;
@@ -4499,26 +4499,26 @@ namespace FPandSign
                 g.Clear(System.Drawing.Color.White);
 
 
-                Bitmap originalImage = new Bitmap(System.IO.Directory.GetCurrentDirectory() + "\\5inch_signok.png");
+                Bitmap originalImage = new Bitmap(System.IO.Directory.GetCurrentDirectory() + "\\Sign.png");
                 Bitmap transparentImage = MakeTransparent(originalImage, 128); // Example threshold value
                 originalImage.Dispose();
 
-                transparentImage.Save(System.IO.Directory.GetCurrentDirectory() + "\\5inch_signok.png");
+                transparentImage.Save(System.IO.Directory.GetCurrentDirectory() + "\\Sign.png");
                 transparentImage.Dispose();
 
                 Bitmap bitmap;
-                using (System.IO.Stream bmpStream = System.IO.File.Open(System.IO.Directory.GetCurrentDirectory() + "\\5inch_signok.png", System.IO.FileMode.Open))
+                using (System.IO.Stream bmpStream = System.IO.File.Open(System.IO.Directory.GetCurrentDirectory() + "\\Sign.png", System.IO.FileMode.Open))
                 {
                     Image image = Image.FromStream(bmpStream);
                     bitmap = new Bitmap(image);
-                    pictureBox2.Image = bitmap;
+                    pictureBox1.Image = bitmap;
                 }
             }
             else
             {
                 try
                 {
-                    g.Clear(System.Drawing.Color.White);
+                    g.Clear(System.Drawing.Color.White);                   
                 }
                 catch
                 {
@@ -4682,7 +4682,7 @@ namespace FPandSign
             }
 
             //++++++ wittaya add
-            string SignFile = System.IO.Directory.GetCurrentDirectory() + "\\5inch_signok.png";
+            string SignFile = System.IO.Directory.GetCurrentDirectory() + "\\Sign.png";
             ret = FiveInchDll.ComSetPictureSavePath(SignFile, 255);
             Console.WriteLine("ComSetPictureSavePath：" + ret);
             //------

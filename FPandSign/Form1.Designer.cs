@@ -55,11 +55,9 @@
             pictureBox1 = new PictureBox();
             button2 = new Button();
             button1 = new Button();
-            pictureBox2 = new PictureBox();
             LEDlightPanel = new LightPanel();
             ((System.ComponentModel.ISupportInitialize)ImageBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // textBoxLog
@@ -301,7 +299,7 @@
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Location = new Point(683, 53);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 520);
+            pictureBox1.Size = new Size(800, 381);
             pictureBox1.TabIndex = 27;
             pictureBox1.TabStop = false;
             // 
@@ -325,16 +323,6 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.White;
-            pictureBox2.Location = new Point(1291, 579);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(192, 82);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 30;
-            pictureBox2.TabStop = false;
-            // 
             // LEDlightPanel
             // 
             LEDlightPanel.BorderStyle = BorderStyle.FixedSingle;
@@ -349,7 +337,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1495, 681);
-            Controls.Add(pictureBox2);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(pictureBox1);
@@ -389,7 +376,6 @@
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)ImageBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -424,6 +410,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
