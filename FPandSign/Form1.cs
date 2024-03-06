@@ -587,8 +587,8 @@ namespace FPandSign
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //OpenAPI();
-            //OpenDevice();
+            OpenAPI();
+            OpenDevice();
 
             //****** Signature *******//
             CheckForIllegalCrossThreadCalls = false;
