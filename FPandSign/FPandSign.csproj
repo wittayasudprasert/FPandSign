@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BioBaseDotNet.LSE">
+      <HintPath>..\..\molsystem.dev.ui-main\LibRef\Libs\BioBaseDotNet.LSE.dll</HintPath>
+    </Reference>
+    <Reference Include="CmtFingerDotNET">
+      <HintPath>..\..\molsystem.dev.ui-main\LibRef\Libs\CmtFingerDotNET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
